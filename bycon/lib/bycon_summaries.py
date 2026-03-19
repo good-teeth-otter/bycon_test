@@ -31,7 +31,7 @@ class ByconSummaries:
                     "label": " by ".join(labels)
                 })
             else:
-                prdbug(f"ByconSummaries - {agg_d.get("id")} doesn't match all concepts")
+                prdbug(f"ByconSummaries - {agg_d.get('id')} doesn't match all concepts")
 
         self.summaries = []
         # ordered selection of aggregation concepts

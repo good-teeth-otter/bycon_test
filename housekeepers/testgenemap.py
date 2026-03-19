@@ -65,6 +65,14 @@ def main():
         print("No analyses selected (analysisIds empty and no analyses found). Exiting.")
         return
 
+    # Respect CLI --limit (BYC_PARS["limit"]) for smoke tests.
+    try:
+        lim = int(BYC_PARS.get("limit", 0) or 0)
+    except Exception:
+        lim = 0
+    if lim > 0:
+        ana_ids = ana_ids[:lim]
+
     print(f"Will compute per-gene CNV maps for {len(ana_ids)} analyses from dataset '{ds_id}'.")
 
     intervals = GB.get_genome_bins()

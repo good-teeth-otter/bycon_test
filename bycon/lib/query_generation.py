@@ -367,7 +367,7 @@ class ByconQuery():
               which is only removed after a successfull type match.
         """
 
-        prdbug(f"Checking variant request type for {v_pars.get("request_profile_id")}")
+        prdbug(f"Checking variant request type for {v_pars.get('request_profile_id')}")
 
         variant_request_type = None
 
